@@ -6,13 +6,49 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Build and Development
 - `npm run build` - Compile TypeScript to JavaScript in dist/
-- `npm run dev -- <image-path>` - Run in development mode with ts-node
-- `npm start <image-path>` - Run the built CLI tool
+- `npm run dev -- <command> [options]` - Run in development mode with ts-node
+- `npm start -- <command> [options]` - Run the built CLI tool
 - `npm run typecheck` - Run TypeScript type checking without emitting files
-- `npm run lint` - Run ESLint on TypeScript files
+- `npm run lint` - Run ESLint on TypeScript files (Note: ESLint config needs fixing)
 
 ### Testing
 - `npm test` - Run Jest tests
+
+### Command Examples
+
+#### Development Mode (ts-node)
+```bash
+# Basic OCR extraction
+npm run dev -- extract pic_data/image.jpg
+
+# Intent analysis for handwritten modifications
+npm run dev -- analyze pic_data/image.jpg
+
+# Batch processing multiple images
+npm run dev -- batch pic_data/*.jpg
+
+# Get help
+npm run dev -- --help
+npm run dev -- extract --help
+```
+
+#### Production Mode (compiled)
+```bash
+# Basic OCR extraction
+npm start -- extract pic_data/image.jpg
+
+# Intent analysis
+npm start -- analyze pic_data/image.jpg
+
+# Batch processing
+npm start -- batch pic_data/*.jpg
+```
+
+### Debugging Tips
+- Development mode automatically loads `.env` configuration
+- Use `--verbose` flag for detailed logging
+- Check API key configuration if authentication fails
+- ESLint configuration needs `@typescript-eslint/recommended` dependency
 
 ## Project Architecture
 
