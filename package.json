@@ -1,0 +1,39 @@
+{
+  "name": "ocr-tool",
+  "version": "1.0.0",
+  "description": "OCR tool using OpenAI compatible API",
+  "main": "dist/index.js",
+  "bin": {
+    "ocr-tool": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "ts-node src/cli.ts",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "ocr",
+    "openai",
+    "ai",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "dotenv": "^17.2.1",
+    "sharp": "^0.33.0"
+  }
+}
