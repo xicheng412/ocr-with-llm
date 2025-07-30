@@ -16,6 +16,20 @@ export class OCRTool {
     });
   }
 
+  async processImageWithIntentAnalysis(options: OCROptions): Promise<OCRResult> {
+    // Validate all options
+    Validator.validateApiKey(options.apiKey);
+    Validator.validateImagePath(options.imagePath);
+
+    // Resolve absolute path
+    const absolutePath = path.resolve(options.imagePath);
+    
+    // Perform OCR with intent analysis
+    const result = await this.client.performOCRWithIntentAnalysis(absolutePath);
+    
+    return result;
+  }
+
   async processImage(options: OCROptions): Promise<OCRResult> {
     // Validate all options
     Validator.validateApiKey(options.apiKey);

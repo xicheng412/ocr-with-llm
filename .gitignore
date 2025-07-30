@@ -58,3 +58,6 @@ temp/
 
 # Test outputs
 test-results/
+
+# Image data
+/pic_data/
