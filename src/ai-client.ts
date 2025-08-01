@@ -1,14 +1,14 @@
-import { GeminiConfig, OCRResult, IntentAnalysisResult } from './types';
+import { AIConfig, OCRResult, IntentAnalysisResult } from './types';
 import { APIError, FileError } from './errors';
 import { Validator } from './validator';
 import * as fs from 'fs';
 
-export class GeminiClient {
+export class AIClient {
   private apiKey: string;
   private baseURL: string;
   private model: string;
 
-  constructor(config: GeminiConfig) {
+  constructor(config: AIConfig) {
     Validator.validateApiKey(config.apiKey);
     Validator.validateModel(config.model);
     

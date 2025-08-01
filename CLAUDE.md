@@ -52,7 +52,7 @@ npm start -- batch pic_data/*.jpg
 
 ## Project Architecture
 
-This is a command-line OCR tool that uses Google Gemini AI (via OpenAI-compatible API) to extract text from images with advanced intent analysis capabilities.
+This is a command-line OCR tool that uses OpenAI-compatible APIs to extract text from images with advanced intent analysis capabilities.
 
 ### Core Components
 
@@ -61,8 +61,8 @@ This is a command-line OCR tool that uses Google Gemini AI (via OpenAI-compatibl
 - `processImageWithIntentAnalysis()` - Advanced OCR with handwriting modification analysis
 - `processMultipleImages()` - Batch processing capability
 
-**GeminiClient** (`src/gemini-client.ts`) - API client for Google Gemini
-- Handles OpenAI-compatible API calls to Gemini
+**AIClient** (`src/ai-client.ts`) - API client for OpenAI-compatible services
+- Handles OpenAI-compatible API calls to various AI providers
 - Contains sophisticated prompts for intent analysis of handwritten modifications
 - Supports both basic OCR and complex document structure analysis
 
@@ -117,7 +117,7 @@ This analysis produces structured output with operations, confidence levels, and
 
 ## API Integration Notes
 
-- Uses OpenAI-compatible API format to communicate with Google Gemini
+- Uses OpenAI-compatible API format to communicate with AI providers
 - Supports custom base URLs for different API providers
 - Image processing via Sharp library for optimization
 - Base64 encoding for image transmission to API

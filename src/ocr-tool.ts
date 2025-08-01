@@ -1,4 +1,4 @@
-import { GeminiClient } from './gemini-client';
+import { AIClient } from './ai-client';
 import { OCROptions, OCRResult } from './types';
 import { Validator } from './validator';
 import { ValidationError, OCRError } from './errors';
@@ -6,10 +6,10 @@ import { ConfigManager } from './config';
 import * as path from 'path';
 
 export class OCRTool {
-  private client: GeminiClient;
+  private client: AIClient;
 
   constructor(apiKey: string, model?: string, baseURL?: string) {
-    this.client = new GeminiClient({ 
+    this.client = new AIClient({ 
       apiKey, 
       model: ConfigManager.getModel(model),
       baseURL: ConfigManager.getBaseURL(baseURL)

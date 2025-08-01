@@ -1,10 +1,10 @@
 # OCR Tool
 
-A command-line OCR tool using Google Gemini Flash Lite for text extraction from images.
+A command-line OCR tool using OpenAI-compatible APIs for text extraction from images.
 
 ## Features
 
-- Extract text from images using Google Gemini AI
+- Extract text from images using OpenAI-compatible AI models
 - Support for various image formats (JPEG, PNG, etc.)
 - TypeScript implementation
 - Command-line interface
@@ -12,7 +12,7 @@ A command-line OCR tool using Google Gemini Flash Lite for text extraction from 
 ## Prerequisites
 
 - Node.js (v16 or higher)
-- Google Gemini API key
+- OpenAI-compatible API key (e.g., OpenAI, Gemini via OpenAI format)
 
 ## Installation
 
@@ -30,7 +30,7 @@ A command-line OCR tool using Google Gemini Flash Lite for text extraction from 
 3. Set up environment variables:
    ```bash
    cp .env.example .env
-   # Edit .env and add your GEMINI_API_KEY
+   # Edit .env and add your OPENAI_API_KEY
    ```
 
 ## Usage
@@ -82,7 +82,7 @@ src/
 ├── cli.ts          # Command-line interface
 ├── config.ts       # Configuration management
 ├── errors.ts       # Error handling
-├── gemini-client.ts # Google Gemini API client
+├── ai-client.ts     # AI API client
 ├── index.ts        # Main entry point
 ├── ocr-tool.ts     # Core OCR functionality
 ├── types.ts        # TypeScript type definitions

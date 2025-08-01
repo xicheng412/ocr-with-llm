@@ -1,3 +1,3 @@
 export { OCRTool } from './ocr-tool';
-export { GeminiClient } from './gemini-client';
-export { OCRResult, OCROptions, GeminiConfig } from './types';
+export { AIClient } from './ai-client';
+export { OCRResult, OCROptions, AIConfig } from './types';
